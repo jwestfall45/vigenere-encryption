@@ -18,3 +18,12 @@ A lightweight C implementation of the Vigenère cipher.
     ```
 
 3. Follow the prompts to enter the message and the key, and choose the operation (encryption or decryption).
+
+## Example
+```sh
+ ./cipher
+Enter message (max 99 characters): information
+Enter key (max 99 characters): foo
+Choose operation: 0 for encryption, 1 for decryption: 0
+Result: nbttfafhwtb
+```
