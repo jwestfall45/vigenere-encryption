@@ -1,5 +1,5 @@
 CC = gcc
 CFLAGS = -Wall -g
 
-cipher: cipher.c
-	$(CC) $(CFLAGS) cipher.c -o cipher
+vigenere_cipher: vigenere_cipher.c
+	$(CC) $(CFLAGS) vigenere_cipher.c -o vigenere_cipher

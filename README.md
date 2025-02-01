@@ -9,7 +9,7 @@ A lightweight C implementation of the Vigenère cipher.
 ## Usage
 1. Compile the code using a C compiler, for example:
     ```sh
-    gcc -o vigenere_cipher cipher.c
+    gcc -o vigenere_cipher vigenere_cipher.c
     ```
 
 2. Run the compiled program:
@@ -21,7 +21,7 @@ A lightweight C implementation of the Vigenère cipher.
 
 ## Example
 ```sh
- ./cipher
+ ./vigenere_cipher
 Enter message (max 99 characters): information
 Enter key (max 99 characters): foo
 Choose operation: 0 for encryption, 1 for decryption: 0
