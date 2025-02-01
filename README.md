@@ -7,9 +7,9 @@ A lightweight C implementation of the Vigenère cipher.
 - Ignores non-alphabetic characters in the message.
 
 ## Usage
-1. Compile the code using a C compiler, for example:
+1. Compile the code
     ```sh
-    gcc -o vigenere_cipher vigenere_cipher.c
+    make vigenere_cipher
     ```
 
 2. Run the compiled program:
