@@ -22,8 +22,15 @@ A lightweight C implementation of the Vigenère cipher.
 ## Example
 ```sh
  ./vigenere_cipher
-Enter message (max 99 characters): information
-Enter key (max 99 characters): foo
+Enter message: information
+Enter key: foo
 Choose operation: 0 for encryption, 1 for decryption: 0
 Result: nbttfafhwtb
+```
+```sh
+ ./vigenere_cipher
+Enter message: nbttfafhwtb
+Enter key: foo
+Choose operation: 0 for encryption, 1 for decryption: 1
+Result: information
 ```

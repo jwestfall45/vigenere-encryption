@@ -50,28 +50,28 @@ static void cipher_operation(char *msg, char *key, operation_t operation) {
 }
 
 int main() {
-    char *msg = malloc(sizeof(char) * 100);
-    char *key = malloc(sizeof(char) * 100);
+    // Temp buffers for input using fixed size to prevent buffer overflow
+    char tmp_msg[101];
+    char tmp_key[101];
+
+    printf("Enter message: ");
+    scanf("%100s", tmp_msg);
+
+    printf("Enter key: ");
+    scanf("%100s", tmp_key);
+
+    // Allocate memory based on the actual length of the input strings
+    char *msg = malloc(strlen(tmp_msg) + 1);
+    char *key = malloc(strlen(tmp_key) + 1);
 
     if (msg == NULL || key == NULL) {
         printf("Memory allocation failed\n");
         return -1;
     }
 
-    printf("Enter message (max 99 characters): ");
-    scanf("%99s", msg);
-
-    printf("Enter key (max 99 characters): ");
-    scanf("%99s", key);
-
-    // Reallocate memory based on the actual length of the input strings
-    msg = realloc(msg, strlen(msg) + 1);
-    key = realloc(key, strlen(key) + 1);
-
-    if (msg == NULL || key == NULL) {
-        printf("Memory reallocation failed\n");
-        return -1;
-    }
+    // Copy the input from the temporary buffer to the dynamically allocated memory
+    strcpy(msg, tmp_msg);
+    strcpy(key, tmp_key);
 
     operation_t operation;
     printf("Choose operation: 0 for encryption, 1 for decryption: ");
