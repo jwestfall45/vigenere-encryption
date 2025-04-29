@@ -1,5 +1,5 @@
 /*
- * File: cipher.c
+ * File: vigenere_cipher.c
  * Description: Vigenère cipher implementation
  *
  * Copyright (C) 2025 Justin Westfall
